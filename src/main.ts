@@ -12,7 +12,7 @@ import ShaderProgram, {Shader} from './rendering/gl/ShaderProgram';
 // Define an object with application parameters and button callbacks
 // This will be referred to by dat.GUI's functions that add GUI elements.
 const controls = {
-  tesselations: 0,
+  tesselations: 2,
   color: [ 255, 255, 255, 255 ],//vec4.fromValues(1, 0, 0, 0),
   'Load Scene': loadScene, // A function pointer, essentially
 };
