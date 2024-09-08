@@ -212,14 +212,11 @@ vec3 fbm(vec3 pos)
     const vec4 ampValue = vec4(2.01f, 1.81f, 1.23f, 4.18f);
     float freq = 0.5f;
     vec3 col  = vec3(0.0f, 0.0f, 0.0f);
-    const mat3 co = mat3( 0.39,  0.12,  0.47,
-					      -0.24,  0.36, -0.18,
-					      0.67, -0.18,  0.21 );
 
     for(int i = 0; i < 4; i++)
     {
         col = col + noise(pos) * freq;
-        pos = co * pos * ampValue[i];
+        pos = pos * ampValue[i];
         freq = freq * 0.4f;
     }
 	return vec3(col);
